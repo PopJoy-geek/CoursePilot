@@ -27,3 +27,30 @@ CoursePilot is built for DKU students who need to balance academic requirements,
 - Real-time seat monitoring and notifications
 - Better personalization with user preferences
 - Integration with official course bulletin / registration systems
+
+## Running the Project
+
+### 1. Install dependencies
+
+```bash
+pip install fastapi uvicorn pydantic
+```
+
+### 2. Start the server
+
+```bash
+uvicorn main:app --reload
+```
+
+### 3. Open the API docs
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+## Current Limitations
+
+* Data is stored locally in JSON files rather than a database
+* The seat-monitor router is implemented but not mounted in `main.py`
+* Some modules overlap in purpose, and the codebase could be further unified and cleaned up
+* Major matching depends on standardized major names in input data   
